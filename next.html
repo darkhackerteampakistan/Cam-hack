@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redirecting...</title>
+<style>
+  body {
+    font-family: -apple-system, sans-serif; margin: 0; height: 100vh;
+    background: #f8fafc; display: flex; justify-content: center;
+    align-items: center; color: #0f172a;
+  }
+  .card { background: white; border-radius: 16px; padding: 40px 50px; text-align: center; box-shadow: 0 20px 50px rgba(2,6,23,0.08); border: 1px solid #e2e8f0; }
+  .big { font-size: 60px; }
+  h2 { margin: 10px 0; }
+  p { color: #64748b; font-size: 14px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="big">🎉</div>
+    <h2>Verification Passed</h2>
+    <p>Redirecting you to your destination...</p>
+  </div>
+  <script>
+    setTimeout(function() {
+      var dest = new URLSearchParams(window.location.search).get("to") || "https://www.google.com";
+      window.location.href = dest;
+    }, 2000);
+  </script>
+</body>
+</html>
